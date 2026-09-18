@@ -39,3 +39,17 @@ private:
         const std::string& value
     );
 };
+
+class OffsetManager
+{
+public:
+    void setOffsets(const OffsetCollection& offsets);
+
+    const OffsetCollection& offsets() const;
+
+    bool hasOffsets() const;
+
+private:
+    OffsetCollection offsets_{};
+    bool initialized_ = false;
+};
